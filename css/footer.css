@@ -1,0 +1,135 @@
+.footer{
+     background-color: #2e2f42;
+     color:#F4F4FD;
+     padding-top: 100px;
+     padding-bottom: 100px;
+     }
+
+.footer-container {
+     display: flex;
+     align-items: baseline;
+}
+
+.footer-left {
+     margin-right: 120px;
+}
+
+.color-studio2 {
+     color: #F4F4FD;
+}
+
+.end-text{
+          max-width: 264px;
+          font-size: 16px;
+          line-height: 1.5;
+          color: #f4f4fd;
+}
+
+.logo-footer {
+     display: inline-block;
+     margin-bottom: 16px;
+     font-weight: 700;
+     font-size: 18px;
+     line-height: 1.17;
+     letter-spacing: 0.03em;
+     text-decoration: none;
+     color: #f4f4fd;
+}
+
+.footer-right {
+     display: flex;
+     gap: 80px;
+}
+
+.footer-social {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
+
+.footer-title {
+     margin-bottom: 16px;
+     font-weight: 500;
+     color: #ffffff;
+}
+.footer-links {
+     display: flex;
+     gap: 16px;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     fill: #f4f4fd
+}
+ 
+.footer-link {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: #4D5AE5;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+     background-color: #31d0aa;
+}
+
+.footer-subscribe {
+     display: flex;
+     flex-direction: column;
+}
+
+.subscribe-form {
+     display: flex;
+     align-items: center;
+     gap: 24px;
+}
+
+.subscribe-input {
+     width: 264px;
+     height: 40px;
+     padding-left: 16px;
+     background-color: transparent;
+     border: 1px solid #ffffff;
+     border-radius: 4px;
+     color: #ffffff;
+     font-size: 12px;
+     line-height: 2;
+     letter-spacing: 0.04em;
+     box-sizing: border-box;
+     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.subscribe-input::placeholder {
+     color: #ffffff;
+}
+
+.subscribe-btn {
+     min-width: 165px;
+     height: 40px;
+     border: none;
+     border-radius: 4px;
+     background-color: #4d5ae5;
+     color: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 16px;
+     font-weight: 500;
+     letter-spacing: 0.04em;
+     cursor: pointer;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+     background-color: #404bbf;
+     outline: none;
+}
+
+.subscribe-icon {
+     fill: #ffffff;
+}
