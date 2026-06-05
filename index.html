@@ -23,6 +23,7 @@
 <body class="body" id="body">
      <header class="header" id="header">
           <div class="container">
+
                <a href="./index.html" class="logo">
                     <span class="color-logo">WEB</span><span class="color-studio">STUDIO</span>
                </a>
@@ -41,6 +42,11 @@
                          <li><a href="tel:+110001111111" class="addres-link">+11 (000) 111-11-11</a></li>
                     </ul>
                </address>
+
+               <button type="button" class="menu-open-btn" data-menu-open>
+                    ☰
+               </button>
+
           </div>
 
      </header>
@@ -49,7 +55,7 @@
           <section class="hero-main" id="hero">
                <div class="container">
                     <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                    <button class="hero-button" type="button">Order Service</button>
+                    <button class="hero-button" type="button" data-modal-open>Order Service</button>
                </div>
           </section>
           <section class="features" id="features">
@@ -119,7 +125,8 @@
                     <h2 class="ourteam">Our Team</h2>
                     <ul class="team-list">
                          <li class="team-item">
-                              <img src="./images/team-1.jpg" class="team-image" width="264" alt="Mark Guerrero" />
+                              <img src="./images/team-1.jpg" srcset="./images/team-1.jpg 1x, ./images/team-1@2x.jpg 2x"
+                                   class="team-image" width="264" alt="Mark Guerrero" />
                               <div class="team-card">
                                    <h3 class="subtitle-team">Mark Guerrero</h3>
                                    <p class="text-team">Product Designer</p>
@@ -152,7 +159,8 @@
                               </div>
                          </li>
                          <li class="team-item">
-                              <img src="./images/team-2.jpg" class="team-image" width="264" alt="Tom Ford" />
+                              <img src="./images/team-2.jpg" srcset="./images/team-2.jpg 1x, ./images/team-2@2x.jpg 2x"
+                                   class="team-image" width="264" alt="Tom Ford" />
                               <div class="team-card">
                                    <h3 class="subtitle-team">Tom Ford</h3>
                                    <p class="text-team">Frontend Developer</p>
@@ -185,7 +193,8 @@
                               </div>
                          </li>
                          <li class="team-item">
-                              <img src="./images/team-3.jpg" class="team-image" width="264" alt="Camila Garcia" />
+                              <img src="./images/team-3.jpg" srcset="./images/team-3.jpg 1x, ./images/team-3@2x.jpg 2x"
+                                   class="team-image" width="264" alt="Camila Garcia" />
                               <div class="team-card">
                                    <h3 class="subtitle-team">Camila Garcia</h3>
                                    <p class="text-team">Marketing</p>
@@ -218,7 +227,8 @@
                               </div>
                          </li>
                          <li class="team-item">
-                              <img src="./images/team-4.jpg" class="team-image" width="264" alt="Daniel Wilson" />
+                              <img src="./images/team-4.jpg" srcset="./images/team-4.jpg 1x, ./images/team-4@2x.jpg 2x"
+                                   class="team-image" width="264" alt="Daniel Wilson" />
                               <div class="team-card">
                                    <h3 class="subtitle-team">Daniel Wilson</h3>
                                    <p class="text-team">UI Designer</p>
@@ -298,7 +308,8 @@
                          </li>
                          <li class="portfolio-item">
                               <div class="portfolio-wrapper">
-                                   <img src="./images/portfolio-4.jpg" width="360" alt="Taxi Service" />
+                                   <img class="portfolio-img" src="./images/portfolio-4.jpg" width="360"
+                                        alt="Taxi Service" />
                                    <p class="portfolio-overlay">
                                         14 Stylish and User-Friendly App Design Concepts
                                    </p>
@@ -402,7 +413,7 @@
 
      </footer>
 
-     <div class="backdrop is-open" id="modal">
+     <div class="backdrop is-open" id="backdrop">
           <div class="modal">
 
                <button type="button" class="button-close">
@@ -458,14 +469,18 @@
                               value="true">
 
                          <label for="user-privacy" class="checkbox-label">
+
                               <span class="checkbox-custom">
                                    <svg class="checkbox-icon" width="10" height="8">
                                         <use href="./images/icons.svg#icon-check"></use>
                                    </svg>
                               </span>
 
-                              I accept the terms and conditions of the
-                              <a href="" class="privacy-link">Privacy Policy</a>
+                              <span class="checkbox-text">
+                                   I accept the terms and conditions of the
+                                   <a href="#" class="privacy-link">Privacy Policy</a>
+                              </span>
+
                          </label>
                     </div>
 
@@ -477,6 +492,58 @@
 
           </div>
      </div>
+
+     <div class="mobile-menu" id="mobile-menu">
+          <div class="mobile-menu-inner">
+               <button type="button" class="menu-close-btn" data-menu-close>
+                    ✕
+               </button>
+
+               <nav class="mobile-nav">
+                    <ul class="mobile-nav-list">
+                         <li><a href="#body">Studio</a></li>
+                         <li><a href="#portfolio">Portfolio</a></li>
+                         <li><a href="#footer">Contacts</a></li>
+                    </ul>
+               </nav>
+
+               <address class="mobile-address">
+                    <a href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+               </address>
+
+               <ul class="mobile-social">
+                    <li><a href="#" target="_blank" class="soc-team-link">
+                              <svg width="16" height="16" class="team-social-icon">
+                                   <use href="./images/icons.svg#icon-instagram"></use>
+                              </svg>
+                         </a>
+                    </li>
+                    <li><a href="#" target="_blank" class="soc-team-link">
+                              <svg width="16" height="16" class="team-social-icon">
+                                   <use href="./images/icons.svg#icon-x"></use>
+                              </svg>
+                         </a>
+                    </li>
+                    <li><a href="#" target="_blank" class="soc-team-link">
+                              <svg width="16" height="16" class="team-social-icon">
+                                   <use href="./images/icons.svg#icon-facebook"></use>
+                              </svg>
+                         </a>
+                    </li>
+                    <li><a href="#" target="_blank" class="soc-team-link">
+                              <svg width="16" height="16" class="team-social-icon">
+                                   <use href="./images/icons.svg#icon-linkid"></use>
+                              </svg>
+                         </a>
+                    </li>
+               </ul>
+          </div>
+     </div>
+
+     <script defer src="./js/modal.js"></script>
+     <script defer src="./js/mobile-menu.js"></script>
+
 </body>
 
 </html>

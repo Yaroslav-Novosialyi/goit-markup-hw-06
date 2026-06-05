@@ -5,6 +5,7 @@ body {
      line-height: 1.5;
      letter-spacing:0.02em;
      background-color: #ffffff;
+     overflow-x: hidden;
 }
 
 ul {
@@ -80,11 +81,26 @@ margin:0;
 }
 
 .container {
+     width: 100%;
      max-width: 1158px;
      padding-left: 15px;
      padding-right: 15px;
      margin: 0 auto;
      box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+     .container {
+          margin: 0 auto;
+          padding: 0 16px;
+     }
+}
+
+@media (min-width: 1158px) {
+     .container {
+          margin: 0 auto;
+          padding: 0 15px;
+     }
 }
 
 img{

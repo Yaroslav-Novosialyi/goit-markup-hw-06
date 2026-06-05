@@ -1,17 +1,18 @@
 .backdrop {
-     background-color: rgba(46, 47, 66, 0.4);
      position: fixed;
      inset: 0;
+     background-color: rgba(46, 47, 66, 0.4);
 
      display: flex;
      justify-content: center;
      align-items: center;
 
-     z-index: 9999;
-
      opacity: 0;
      visibility: hidden;
      pointer-events: none;
+
+     transition: opacity 250ms ease;
+     z-index: 9999;
 }
 
 .backdrop.is-open {
@@ -21,30 +22,63 @@
 }
 
 .modal {
-     background-color: #fcfcfc;
+     width: 100%;
+     max-width: 408px;
+
+     background: #fcfcfc;
      border-radius: 4px;
 
      padding: 72px 24px 24px;
-
-     max-width: 408px;
-     width: 100%;
-     max-height: 90vh;
-
-     overflow-y: auto;
 
      box-shadow:
           0 1px 1px rgba(0, 0, 0, 0.14),
           0 1px 3px rgba(0, 0, 0, 0.12),
           0 2px 1px rgba(0, 0, 0, 0.2);
+     margin: auto;
+}
 
-     position: relative;
+.button-close {
+     position: absolute;
+     top: 24px;
+     right: 24px;
+
+     width: 24px;
+     height: 24px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     border-radius: 50%;
+     border: 1px solid rgba(46, 47, 66, 0.4);
+
+     background-color: #e7e9fc;
+     cursor: pointer;
+
+     transition: background-color 250ms ease, border-color 250ms ease;
+}
+
+.button-close:hover,
+.button-close:focus {
+     background-color: #404bbf;
+     border-color: transparent;
+}
+
+.modal-close-icon {
+     fill: #2e2f42;
+     transition: fill 250ms ease;
+}
+
+.button-close:hover .modal-close-icon,
+.button-close:focus .modal-close-icon {
+     fill: #ffffff;
 }
 
 .modal-title {
      font-weight: 500;
      font-size: 16px;
      line-height: 1.5;
-     letter-spacing: 0.02em;
+
      text-align: center;
 
      color: #2e2f42;
@@ -52,11 +86,11 @@
      margin-bottom: 16px;
 }
 
-.modal-field{
+.modal-field {
      margin-bottom: 8px;
 }
 
-.modal-field--comment{
+.modal-field--comment {
      margin-bottom: 16px;
 }
 
@@ -85,12 +119,9 @@
      border: 1px solid rgba(46, 47, 66, 0.4);
      border-radius: 4px;
 
-     transition: border-color 250ms ease;
-}
-
-.form-input,
-.textarea-modal {
      background-color: transparent;
+
+     transition: border-color 250ms ease;
 }
 
 .form-input:focus {
@@ -126,7 +157,8 @@
 
      font-size: 12px;
      line-height: 1.17;
-     letter-spacing: 0.04em;
+
+     background-color: transparent;
 
      transition: border-color 250ms ease;
 }
@@ -136,96 +168,55 @@
      border-color: #4d5ae5;
 }
 
-.textarea-modal::placeholder {
-     color: rgba(46, 47, 66, 0.4);
-}
-
-.button-close {
-     position: absolute;
-     top: 24px;
-     right: 24px;
-
-     width: 24px;
-     height: 24px;
-
-     border-radius: 50%;
-     border: 1px solid rgba(46, 47, 66, 0.4);
-
-     background-color: #e7e9fc;
-
-     display: flex;
-     align-items: center;
-     justify-content: center;
-
-     cursor: pointer;
-
-     transition: background-color 250ms ease;
-}
-
-.button-close:hover,
-.button-close:focus {
-     background-color: #404bbf;
-}
-
-.modal-close-icon {
-     fill: #2e2f42;
-     transition: fill 250ms ease;
-}
-
-.button-close:hover .modal-close-icon,
-.button-close:focus .modal-close-icon {
-     fill: #ffffff;
-}
-
 .checkbox-wrapper {
      display: flex;
      align-items: center;
 
      font-size: 12px;
      line-height: 1.17;
-     letter-spacing: 0.04em;
 
      color: #8e8f99;
+
      margin-bottom: 24px;
 }
 
 .checkbox-input {
      position: absolute;
-
      width: 1px;
      height: 1px;
-
      margin: -1px;
-     padding: 0;
-     border: 0;
-
-     clip: rect(0 0 0 0);
      overflow: hidden;
 }
 
 .checkbox-label {
      display: flex;
      align-items: center;
+     gap: 8px;
+
+     font-size: 12px;
+     line-height: 1.17;
+     color: #8e8f99;
 
      cursor: pointer;
 }
 
 .checkbox-custom {
+     flex-shrink: 0;
+
      width: 16px;
      height: 16px;
 
-     margin-right: 8px;
-
-     display: inline-flex;
+     display: flex;
      align-items: center;
      justify-content: center;
 
      border: 1px solid rgba(46, 47, 66, 0.4);
      border-radius: 2px;
-
-     background-color: transparent;
-
      transition: background-color 250ms ease, border-color 250ms ease;
+}
+
+.checkbox-text {
+     display: inline;
 }
 
 .checkbox-icon {
@@ -247,6 +238,7 @@
 }
 
 .privacy-link {
+     margin-left: 3px;
      color: #4d5ae5;
      text-decoration: underline;
 }
@@ -256,23 +248,17 @@
      margin: 0 auto;
 
      min-width: 169px;
-
      padding: 16px 32px;
 
      border: none;
      border-radius: 4px;
 
      background-color: #4d5ae5;
-     color: #ffffff;
+     color: #fff;
 
-     font-size: 16px;
      font-weight: 500;
-     line-height: 1.5;
-     letter-spacing: 0.04em;
 
      cursor: pointer;
-
-     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 
      transition: background-color 250ms ease;
 }

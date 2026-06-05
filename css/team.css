@@ -6,7 +6,6 @@
 
 .ourteam{
      margin-bottom: 72px;
-     font-family: Roboto;
      font-weight: 700;
      font-size: 36px;
      line-height:1.11;
@@ -15,10 +14,35 @@
      color:#2E2F42;
 }
 
-.team-list{
+.team-list {
      display: flex;
-     gap: 24px;
-     justify-content: center;
+     flex-direction: column;
+     gap: 72px;
+     padding: 0;
+     margin: 0;
+}
+
+@media (min-width: 768px) {
+     .team-list {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 64px 24px;
+          justify-content: center;
+     }
+
+     .team-item {
+          width: calc((100% - 24px) / 2);
+     }
+}
+
+@media (min-width: 1158px) {
+     .team-list {
+          flex-wrap: nowrap;
+     }
+
+     .team-item {
+          width: 264px;
+     }
 }
 
 .team-item {
@@ -56,7 +80,6 @@
 
 .team-image {
      display: block;
-     width: 100%;
      height: auto;
 }
 
