@@ -7,15 +7,14 @@
      display: flex;
      flex-direction: column;
      gap: 72px;
+
      list-style: none;
      margin: 0;
      padding: 0;
 }
 
 .features-item {
-     display: flex;
-     flex-direction: column;
-     text-align: left;
+     text-align: center;
 }
 
 .features-icon-box {
@@ -31,17 +30,20 @@
 
 .subtitle-features {
      margin-bottom: 8px;
+
      font-size: 20px;
-     font-weight: 700;
-     line-height: 1.2;
+     font-weight: 500;
+     line-height: 1.1;
+
      color: #2e2f42;
 }
 
 .text-features {
      font-size: 16px;
      line-height: 1.5;
-     color: #434455;
      font-weight: 400;
+
+     color: #434455;
 }
 
 @media (min-width: 768px) {
@@ -88,7 +90,7 @@
      }
 
      .subtitle-features {
-          font-weight: 700;
+          font-weight: 500;
      }
 
      .text-features {

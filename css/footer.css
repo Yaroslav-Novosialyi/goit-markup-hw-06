@@ -106,7 +106,6 @@
 
 .subscribe-input {
      width: 100%;
-     max-width: 288px;
      height: 40px;
 
      padding-left: 16px;
@@ -168,18 +167,15 @@
           flex-direction: row;
           flex-wrap: wrap;
           align-items: baseline;
-          text-align: left;
 
           max-width: 584px;
           margin: 0 auto;
 
           gap: 72px 24px;
+          text-align: left;
      }
 
-     .footer-social {
-          align-items: flex-start;
-     }
-
+     .footer-social,
      .footer-subscribe {
           align-items: flex-start;
      }
@@ -188,21 +184,14 @@
           flex-direction: row;
           gap: 24px;
      }
-
-     .subscribe-input {
-          width: 264px;
-     }
 }
 
 @media (min-width: 1158px) {
      .footer-container {
           max-width: 1158px;
           flex-wrap: nowrap;
-          justify-content: space-between;
-          gap: 0;
-     }
 
-     .footer-social {
-          margin-right: 0;
+          justify-content: flex-start;
+          gap: 120px;
      }
 }

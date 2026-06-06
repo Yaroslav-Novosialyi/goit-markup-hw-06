@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+
     margin: 0;
     padding: 0;
     list-style: none;
@@ -46,7 +47,6 @@
 
     width: 100%;
     height: 100%;
-
     padding: 40px 32px;
 
     background-color: #4d5ae5;
@@ -91,6 +91,10 @@
 }
 
 @media (min-width: 768px) {
+    .portfolio-list {
+        row-gap: 72px;
+    }
+
     .portfolio-item {
         width: calc((100% - 24px) / 2);
     }
@@ -100,11 +104,6 @@
     .portfolio {
         padding-top: 120px;
         padding-bottom: 120px;
-    }
-
-    .portfolio-list {
-        column-gap: 24px;
-        row-gap: 48px;
     }
 
     .portfolio-item {

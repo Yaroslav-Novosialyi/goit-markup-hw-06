@@ -1,6 +1,7 @@
 .backdrop {
      position: fixed;
      inset: 0;
+
      background-color: rgba(46, 47, 66, 0.4);
 
      display: flex;
@@ -11,7 +12,8 @@
      visibility: hidden;
      pointer-events: none;
 
-     transition: opacity 250ms ease;
+     transition: opacity 250ms ease, visibility 250ms ease;
+
      z-index: 9999;
 }
 
@@ -22,19 +24,19 @@
 }
 
 .modal {
-     width: 100%;
-     max-width: 408px;
+     width: 288px;
+     max-width: 288px;
 
      background: #fcfcfc;
      border-radius: 4px;
 
-     padding: 72px 24px 24px;
+     padding: 40px 16px 24px;
 
      box-shadow:
           0 1px 1px rgba(0, 0, 0, 0.14),
           0 1px 3px rgba(0, 0, 0, 0.12),
           0 2px 1px rgba(0, 0, 0, 0.2);
-     margin: auto;
+
      position: relative;
 }
 
@@ -135,9 +137,7 @@
      left: 16px;
      top: 50%;
      transform: translateY(-50%);
-
      fill: #2e2f42;
-
      transition: fill 250ms ease;
 }
 
@@ -213,11 +213,8 @@
 
      border: 1px solid rgba(46, 47, 66, 0.4);
      border-radius: 2px;
-     transition: background-color 250ms ease, border-color 250ms ease;
-}
 
-.checkbox-text {
-     display: inline;
+     transition: background-color 250ms ease, border-color 250ms ease;
 }
 
 .checkbox-icon {
@@ -267,4 +264,13 @@
 .button-send:hover,
 .button-send:focus {
      background-color: #404bbf;
+}
+
+@media (min-width: 768px) {
+     .modal {
+          width: 408px;
+          max-width: 408px;
+
+          padding: 40px 24px;
+     }
 }

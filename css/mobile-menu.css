@@ -1,33 +1,21 @@
 .menu-open-btn {
      margin-left: auto;
-
      display: flex;
      align-items: center;
      justify-content: center;
-
      padding: 0;
-
      background-color: transparent;
      border: none;
-
      cursor: pointer;
 }
 
 .menu-open-icon {
-     display: flex;
-          align-items: center;
-          justify-content: center;
-     
-          background: transparent;
-          border: none;
-          padding: 0;
-          cursor: pointer;
+     display: block;
 }
 
 .mobile-menu {
      position: fixed;
      inset: 0;
-
      background-color: #ffffff;
 
      opacity: 0;
@@ -47,13 +35,10 @@
 
 .mobile-menu-inner {
      position: relative;
-
      height: 100%;
-
      display: flex;
      flex-direction: column;
-
-     padding: 72px 16px 40px 16px;
+     padding: 72px 16px 40px;
 }
 
 .menu-close-btn {
@@ -70,9 +55,7 @@
 
      border-radius: 50%;
      border: 1px solid rgba(46, 47, 66, 0.1);
-
      background-color: transparent;
-
      cursor: pointer;
 }
 
@@ -85,10 +68,9 @@
      flex-direction: column;
      gap: 40px;
 
+     list-style: none;
      margin: 0;
      padding: 0;
-
-     list-style: none;
 }
 
 .mobile-nav-list a {
@@ -96,56 +78,49 @@
      font-size: 36px;
      line-height: 1.11;
      letter-spacing: 0.02em;
-
      color: #2e2f42;
-
-     display: inline-block;
-
-     transition: color 250ms ease, transform 250ms ease;
-}
-
-.mobile-nav-list a:hover,
-.mobile-nav-list a:focus {
-     color: #404bbf;
-     transform: translateX(4px);
-}
-
-.mobile-nav-list .current {
-     color: #404bbf;
 }
 
 .mobile-address {
-     display: flex;
-     flex-direction: column;
-     gap: 24px;
-
+     font-style: normal;
      margin-bottom: 48px;
 }
 
-.mobile-address a:first-child {
+.mobile-contact-list {
+     display: flex;
+     flex-direction: column;
+     gap: 24px;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+.mobile-contact-list a:first-child {
      font-weight: 500;
      font-size: 20px;
      line-height: 1.2;
-
      color: #4d5ae5;
 }
 
-.mobile-address a:last-child {
+.mobile-contact-list a:last-child {
      font-weight: 500;
      font-size: 20px;
      line-height: 1.2;
-
      color: #434455;
 }
 
 .mobile-social {
      display: flex;
-     justify-content: space-between;
-
+     gap: 40px;
+     justify-content: flex-start;
+     list-style: none;
      margin: 0;
      padding: 0;
+}
 
-     list-style: none;
+.mobile-social svg {
+     width: 24px;
+     height: 24px;
 }
 
 .navigation,
@@ -160,8 +135,11 @@
           display: none;
      }
 
-     .navigation,
-     .address {
+     .navigation {
           display: block;
+     }
+
+     .address {
+          display: flex;
      }
 }
