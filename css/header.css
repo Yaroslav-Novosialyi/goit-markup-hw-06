@@ -30,6 +30,10 @@
 }
 
 @media (min-width: 768px) {
+     .nav-link {
+          display: block;
+          padding: 24px 0;
+     }
 
      .menu-open-btn {
           display: none;
@@ -69,6 +73,15 @@
 
      .header .container {
           gap: 0;
+     }
+
+     .navigation-list {
+          display: flex;
+          gap: 40px;
+     }
+
+     .nav-link {
+          padding: 24px 0;
      }
 
      .address-list {
