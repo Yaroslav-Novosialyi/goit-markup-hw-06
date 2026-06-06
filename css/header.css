@@ -1,5 +1,5 @@
 .header {
-     border-bottom: 1px solid #E7E9FC;
+     border-bottom: 1px solid #e7e9fc;
 }
 
 .header .container {
@@ -10,7 +10,7 @@
 
 .logo {
      display: inline-block;
-     padding: 24px 0;
+     padding: 16px 0;
 }
 
 .navigation,
@@ -23,10 +23,10 @@
      align-items: center;
      justify-content: center;
 
-     background: transparent;
+     padding: 0;
+     background-color: transparent;
      border: none;
      cursor: pointer;
-     padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -42,15 +42,12 @@
 
      .header .container {
           justify-content: flex-start;
-          gap: 76px;
+          gap: 120px;
      }
 
      .navigation-list {
           display: flex;
           gap: 40px;
-          margin: 0;
-          padding: 0;
-          list-style: none;
      }
 
      .address-list {
@@ -63,14 +60,15 @@
      .addres-link {
           font-size: 12px;
           line-height: 1.17;
-          padding: 0;
+          letter-spacing: 0.04em;
+          color: #434455;
      }
 }
 
 @media (min-width: 1158px) {
 
      .header .container {
-          gap: 120px;
+          gap: 0;
      }
 
      .address-list {
@@ -81,6 +79,8 @@
      .addres-link {
           font-size: 16px;
           line-height: 1.5;
+          letter-spacing: 0.02em;
+          color: #434455;
           padding: 24px 0;
      }
 }
