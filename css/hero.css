@@ -79,6 +79,10 @@
                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                url("../images/hero-bg.jpg");
      }
+
+     .hero-title {
+          margin-bottom: 48px;
+     }
 }
 
 @media (min-resolution: 2dppx) {
