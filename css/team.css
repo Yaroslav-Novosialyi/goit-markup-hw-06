@@ -1,17 +1,17 @@
 .team {
      background-color: #F4F4FD;
-     padding-top: 120px;
-     padding-bottom: 120px;
+     padding-top: 96px;
+     padding-bottom: 96px;
 }
 
-.ourteam{
+.ourteam {
      margin-bottom: 72px;
      font-weight: 700;
      font-size: 36px;
-     line-height:1.11;
+     line-height: 1.11;
      letter-spacing: 0.02em;
      text-align: center;
-     color:#2E2F42;
+     color: #2E2F42;
 }
 
 .team-list {
@@ -20,29 +20,8 @@
      gap: 72px;
      padding: 0;
      margin: 0;
-}
 
-@media (min-width: 768px) {
-     .team-list {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 64px 24px;
-          justify-content: center;
-     }
-
-     .team-item {
-          width: calc((100% - 24px) / 2);
-     }
-}
-
-@media (min-width: 1158px) {
-     .team-list {
-          flex-wrap: nowrap;
-     }
-
-     .team-item {
-          width: 264px;
-     }
+     align-items: center;
 }
 
 .team-item {
@@ -60,14 +39,14 @@
      text-align: center;
 }
 
-.subtitle-team{
+.subtitle-team {
      margin-bottom: 8px;
      font-weight: 500;
      font-size: 20px;
      line-height: 1.2;
      letter-spacing: 0.02em;
      text-align: center;
-     color:#2e2f42;
+     color: #2e2f42;
 }
 
 .text-team {
@@ -76,6 +55,7 @@
      letter-spacing: 0.02em;
      text-align: center;
      color: #434455;
+     font-weight: 400;
 }
 
 .team-image {
@@ -83,16 +63,16 @@
      height: auto;
 }
 
-.team-links{
+.team-links {
      display: flex;
      justify-content: center;
      gap: 24px;
      margin-top: 8px;
      padding: 0;
-     list-style:none;
+     list-style: none;
 }
 
-.soc-team-link{
+.soc-team-link {
      display: flex;
      align-items: center;
      justify-content: center;
@@ -101,7 +81,7 @@
      border-radius: 50%;
      background-color: #4d5ae5;
      transition:
-     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-team-link:hover,
@@ -111,4 +91,35 @@
 
 .team-social-icon {
      fill: #f4f4fd;
+}
+
+@media (min-width: 768px) {
+     .team {
+          padding-top: 96px;
+          padding-bottom: 96px;
+     }
+
+     .team-list {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 64px 24px;
+     }
+
+     .team-item {
+          width: 264px;
+     }
+}
+
+@media (min-width: 1158px) {
+     .team {
+          padding-top: 120px;
+          padding-bottom: 120px;
+     }
+
+     .team-list {
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 24px;
+     }
 }

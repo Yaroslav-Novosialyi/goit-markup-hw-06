@@ -44,9 +44,10 @@
                </address>
 
                <button type="button" class="menu-open-btn" data-menu-open>
-                    ☰
+                    <svg class="menu-open-icon" width="24" height="24">
+                         <use href="./images/icons.svg#icon-burger"></use>
+                    </svg>
                </button>
-
           </div>
 
      </header>
@@ -75,7 +76,7 @@
                          <li class="features-item">
                               <div class="features-icon-box">
                                    <svg class="features-icon" width="64" height="64">
-                                        <use href="./images/icons.svg#icon-illustration"></use>
+                                        <use href="./images/icons.svg#icon-illustration1"></use>
                                    </svg>
                               </div>
                               <h3 class="subtitle-features">Punctuality</h3>
@@ -413,7 +414,7 @@
 
      </footer>
 
-     <div class="backdrop is-open" id="backdrop">
+     <div class="backdrop" id="modal">
           <div class="modal">
 
                <button type="button" class="button-close">
@@ -495,21 +496,25 @@
 
      <div class="mobile-menu" id="mobile-menu">
           <div class="mobile-menu-inner">
-               <button type="button" class="menu-close-btn" data-menu-close>
-                    ✕
+               <button type="button" class="menu-close-btn">
+                    <svg width="8" height="8">
+                         <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
                </button>
 
                <nav class="mobile-nav">
                     <ul class="mobile-nav-list">
-                         <li><a href="#body">Studio</a></li>
+                         <li><a href="#hero">Studio</a></li>
                          <li><a href="#portfolio">Portfolio</a></li>
                          <li><a href="#footer">Contacts</a></li>
                     </ul>
                </nav>
 
                <address class="mobile-address">
-                    <a href="tel:+110001111111">+11 (000) 111-11-11</a>
-                    <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <ul class="mobile-contact-list">
+                         <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                         <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
                </address>
 
                <ul class="mobile-social">
